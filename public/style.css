@@ -1,7 +1,95 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  background: #DCE4C9;
+  font-family: "Potta One","Racing Sans One", serif;
+  text-align: center;
+}
+h1{
+  font-family: "Potta One", serif;
+  color: #B6A28E;
+}
+h3{
+  font-size: 25px;
+  font-family: "Potta One", serif;
+  color:#B6A28E;
 }
 img{
-  height: 200px;
+  height: 230px;
+  border-radius: 10px;
+}
+.page-header.text-center{
+  margin-top: 0;
+}
+.jumbotron.text-center{
+  border-radius: 30px;
+  box-shadow: 10px 6px 5px #F5F5DC;
+  background: #E07B39;
+}
+.btn.btn-default{
+  height: 40px;
+  width: 20%;
+  font-size: 17px;
+}
+li{
+  border: 2px solid black;
+  list-style: none;
+  height: 250px;
+  width: 130%;
+  margin: auto;
+  text-align: center;
+  background-color: #B6A28E;
+  border-radius: 10px;
+  margin-left: 130px;
+  border: 1px solid #B6A28E;
+}
+.cPics{
+  margin: auto;
+  height: 160px;
+  margin-top: 30px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.fa-heart,.fa-trash-o{
+  font-size: 25px;
+  color: #F5F5DC;
+}
+.fa-heart:hover,.fa-trash-o:hover{
+  color: #DCE4C9;
+}
+#logout{
+  background: #F5F5DC;
+  border: 1px solid #B6A28E;
+  border-radius: 10px;
+  color: #B6A28E;
+  font-size: 20px;
+}
+#logout:hover{
+  color: #F5F5DC;
+  background: #B6A28E;
+  border: 1px solid #F5F5DC;
+}
+.btn-default{
+  background: #B6A28E;
+  color: #F5F5DC;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.generate-cat{
+  height: 30px;
+  border-radius: 10px;
+}
+button:hover{
+  background: #F5F5DC;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+  li{
+    margin-left: 0;
+  }
 }

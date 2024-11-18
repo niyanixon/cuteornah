@@ -2,22 +2,20 @@
 
 // set up ======================================================================
 // get all the tools we need
-var express  = require('express');
-var app      = express();
-var port     = process.env.PORT || 8080;
+let express  = require('express');
+let app      = express();
+let port     = process.env.PORT || 4000;
 const MongoClient = require('mongodb').MongoClient
-var mongoose = require('mongoose');
-var passport = require('passport');
-var flash    = require('connect-flash');
+let mongoose = require('mongoose');
+let passport = require('passport'); //auth
+let flash    = require('connect-flash'); // alert messages
+let morgan       = require('morgan'); //log all request 
+let cookieParser = require('cookie-parser'); 
+let session      = require('express-session');// keep users logged in
 
-var morgan       = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var session      = require('express-session');
+let configDB = require('./config/database.js');
 
-var configDB = require('./config/database.js');
-
-var db
+let db
 
 // configuration ===============================================================
 mongoose.connect(configDB.url, (err, database) => {
@@ -31,13 +29,14 @@ require('./config/passport')(passport); // pass passport for configuration
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
-app.use(bodyParser.json()); // get information from html forms
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); // get information from html forms
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
 
 app.set('view engine', 'ejs'); // set up ejs for templating
 
+//stay logged in
 // required for passport
 app.use(session({
     secret: 'rcbootcamp2021b', // session secret
