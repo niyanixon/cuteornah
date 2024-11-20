@@ -1,3 +1,5 @@
 ## CUTE OR NAH
-<p>This application is a tinder for cats it works just like our normal tinder does you recive a picture you can heart the picture and save it to you favorites collecion or you can hit next picture</p>
+<p>This application is like Tinder, but for cats! Just like the popular dating app, you’re presented with a photo of an adorable cat. You can either "heart" the picture to save it to your favorites collection or skip to see the next cat photo. It's a fun and interactive way to explore a gallery of charming cats!</p>
+
+
 
